@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components"
 import { SubmitBar } from "./components/submit-bar/SubmitBar"
 import { SubmittedCard } from "./components/submitted-todos/SubmittedCard"
+import { EmptyStateCard } from "./components/empty-state/EmptyStateCard"
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -12,15 +13,6 @@ const GlobalStyle = createGlobalStyle`
    background: #ffefe7ff;
   }
 `
-const StyledBackgroundImage = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-`
 
 const SubmittedCardContainer = styled.div`
   margin-top: 30px;
@@ -30,12 +22,12 @@ export const App = () => {
   return (
     <>
       <GlobalStyle />
-      <StyledBackgroundImage src="/icons:images/phyton.png" alt="" />
       <h1>To-do app</h1>
       <SubmitBar />
-      <SubmittedCardContainer>
+      <EmptyStateCard />
+      {/* <SubmittedCardContainer>
         <SubmittedCard />
-      </SubmittedCardContainer>
+      </SubmittedCardContainer> */}
     </>
   )
 }
