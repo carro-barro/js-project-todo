@@ -13,10 +13,31 @@ const StyledBar = styled.div`
   display: flex;
   justify-self: center;
   justify-content: space-between;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 65%;
+    height: 40px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    width: 45%;
+    height: 45px;
+  }
 `
 const StyledInput = styled.input`
   border: none;
   background: #ffecd1;
+  font-family: 'Sniglet', sans-serif;
+  font-size: 16px;
+  margin-left: 10px;
+
+  &::placeholder {
+    font-family: 'Sniglet', sans-serif;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: 18px;
+  }
 `
 
 export const SubmitBar = () => {

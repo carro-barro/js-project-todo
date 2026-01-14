@@ -11,7 +11,15 @@ const GlobalStyle = createGlobalStyle`
   body {
    margin: 0;
    background: #ffefe7ff;
+   font-family: 'Sniglet', sans-serif;
+   color: #001524;
   }
+`
+
+const StyledHeading = styled.h1`
+  text-align: center;
+  font-size: 30px;
+  margin: 30px 0 20px 0;
 `
 
 const SubmittedCardContainer = styled.div`
@@ -22,12 +30,12 @@ export const App = () => {
   return (
     <>
       <GlobalStyle />
-      <h1>To-do app</h1>
+      <StyledHeading>To-do app</StyledHeading>
       <SubmitBar />
-      <EmptyStateCard />
-      {/* <SubmittedCardContainer>
+      {/* <EmptyStateCard /> */}
+      <SubmittedCardContainer>
         <SubmittedCard />
-      </SubmittedCardContainer> */}
+      </SubmittedCardContainer>
     </>
   )
 }

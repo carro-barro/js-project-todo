@@ -5,9 +5,13 @@ const StyledButton = styled.button`
   color: white;
   border: none;
   padding: 10px;
-  font-size: 14px;
-  
+  font-family: 'Sniglet', sans-serif;
+  font-size: 16px;
   align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: 18px;
+  }
 `
 
 export const SubmitButton = () => {
