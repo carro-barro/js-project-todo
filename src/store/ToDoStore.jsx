@@ -1,0 +1,8 @@
+import { create } from "zustand"
+
+export const useToDoStore = create(set => ({
+  todos: [],
+  addTodo: (text) => set((state) => ({todos: [...state.todos, {text, completed:false, id: Date.now()}]})),
+  removeTodo: (id) => set((state) => ({todos: state.todos.filter(t => t.id !== id)})),
+  toggleTodo: (id) => set((state) => ({todos: state.todos.map(t => t.id === id ? {...t, completed: !t.completed}: t)}))
+}))

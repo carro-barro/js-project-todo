@@ -1,16 +1,17 @@
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
-  background: #15616d;
-  color: white;
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   border: none;
-  padding: 10px;
+  height: 100%;
+  padding: 0 10px;
   font-family: 'Sniglet', sans-serif;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fontSizes.md};
   align-items: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: 18px;
+    font-size: ${({ theme }) => theme.fontSizes.lg};
   }
 `
 

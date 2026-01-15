@@ -1,41 +1,33 @@
-import styled, { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 import { SubmitBar } from "./components/submit-bar/SubmitBar"
-import { SubmittedCard } from "./components/submitted-todos/SubmittedCard"
+import { SubmittedList } from "./components/submitted-todos/SubmittedList"
 import { EmptyStateCard } from "./components/empty-state/EmptyStateCard"
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-   margin: 0;
-   background: #ffefe7ff;
-   font-family: 'Sniglet', sans-serif;
-   color: #001524;
-  }
-`
+import { useToDoStore } from "./store/ToDoStore"
 
 const StyledHeading = styled.h1`
   text-align: center;
-  font-size: 30px;
+  font-size: ${({ theme }) => theme.fontSizes.h1};
   margin: 30px 0 20px 0;
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
 `
 
-const SubmittedCardContainer = styled.div`
+const StyledCardContainer = styled.div`
   margin-top: 30px;
 `
 
 export const App = () => {
+  const todos = useToDoStore(state => state.todos)
   return (
     <>
-      <GlobalStyle />
       <StyledHeading>To-do app</StyledHeading>
       <SubmitBar />
-      {/* <EmptyStateCard /> */}
-      <SubmittedCardContainer>
-        <SubmittedCard />
-      </SubmittedCardContainer>
+      <StyledCardContainer>
+        {todos.length === 0 ? (
+          <EmptyStateCard />
+        ) : (
+          <SubmittedList />
+        )}
+      </StyledCardContainer>
     </>
   )
 }

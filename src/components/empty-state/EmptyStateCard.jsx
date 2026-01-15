@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledCard = styled.div`
   width: 75%;
-  background: #ffecd1;
+  background: ${({ theme }) => theme.colors.secondary};
   justify-self: center;
   padding: 20px;
   margin-top: 30px;
@@ -18,27 +18,26 @@ const StyledCard = styled.div`
   }
 `
 const StyledHeading = styled.h2`
-  
-  font-size: 20px;
+  font-size: ${({ theme }) => theme.fontSizes.xl};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: 24px;
+    font-size: ${({ theme }) => theme.fontSizes.xxl};
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: 28px;
+    font-size: ${({ theme }) => theme.fontSizes.xxxl};
   }
 `
 
 const StyledText = styled.p`
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fontSizes.md};
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: 18px;
+    font-size: ${({ theme }) => theme.fontSizes.lg};
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    font-size: 20px;
+    font-size: ${({ theme }) => theme.fontSizes.xl};
   }
 `
 const StyledImage = styled.img`
@@ -60,7 +59,7 @@ export const EmptyStateCard = () => {
   return (
     <StyledCard>
       <StyledHeading>No tasks yet</StyledHeading>
-      <StyledImage src="/icons&images/sun.png" />
+      <StyledImage src="/icons&images/sun.png" alt="happy sun illustration" />
       <StyledText>The day is yours to conquer! What do you want to achieve today?</StyledText>
     </StyledCard>
   )
