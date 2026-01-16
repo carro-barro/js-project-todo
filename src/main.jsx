@@ -6,7 +6,7 @@ import { GlobalStyle } from './GlobalStyle.jsx'
 
 
 import { App } from './App.jsx'
-import './index.css'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ThemeProvider theme={Theme}>

@@ -10,10 +10,9 @@ const StyledBar = styled.div`
   border: 2px ${({ theme }) => theme.colors.primary} solid;
   border-radius: 6px;
   background: ${({ theme }) => theme.colors.secondary};
-  margin: 20px 0;
+  margin: 20px auto;
   overflow: hidden; 
   display: flex;
-  justify-self: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 65%;

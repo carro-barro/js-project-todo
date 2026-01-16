@@ -3,9 +3,8 @@ import styled from 'styled-components'
 const StyledCard = styled.div`
   width: 75%;
   background: ${({ theme }) => theme.colors.secondary};
-  justify-self: center;
+  margin: 30px auto 0 auto;
   padding: 20px;
-  margin-top: 30px;
   text-align: center;
   border-radius: 6px;
   box-shadow: ${({ theme }) => theme.shadows.card};
@@ -45,7 +44,7 @@ const StyledImage = styled.img`
   width: 50%;
   height: auto;
   display: flex;
-  justify-self: center;
+  margin: 30px auto 0 auto;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 40%;
