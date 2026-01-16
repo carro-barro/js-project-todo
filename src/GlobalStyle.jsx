@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Sniglet', sans-serif;
     color: ${({ theme }) => theme.colors.primary};
     background-color: ${({ theme }) => theme.colors.background};
-    align-items: center;
+    align-content: center;
 
     background-image: url("/icons&images/snake.svg");
     background-repeat: no-repeat;
