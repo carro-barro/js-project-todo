@@ -60,7 +60,7 @@ export const EmptyStateCard = () => {
     <StyledCard>
       <StyledHeading>No tasks yet</StyledHeading>
       <StyledImage src="/icons&images/sun.png" alt="happy sun illustration" />
-      <StyledText>The day is yours to conquer! What do you want to achieve today?</StyledText>
+      <StyledText>The day is yours to conquer! <br /> What do you want to achieve today?</StyledText>
     </StyledCard>
   )
 }

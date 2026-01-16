@@ -4,6 +4,10 @@ import { SubmittedList } from "./components/submitted-todos/SubmittedList"
 import { EmptyStateCard } from "./components/empty-state/EmptyStateCard"
 import { useToDoStore } from "./store/ToDoStore"
 
+// const StyledBackgroundImg = styled.img`
+
+// `
+
 const StyledHeading = styled.h1`
   text-align: center;
   font-size: ${({ theme }) => theme.fontSizes.h1};
@@ -19,6 +23,7 @@ export const App = () => {
   const todos = useToDoStore(state => state.todos)
   return (
     <>
+      {/* <img src="/icons&images/snake.png" alt=""></img> */}
       <StyledHeading>To-do app</StyledHeading>
       <SubmitBar />
       <StyledCardContainer>
