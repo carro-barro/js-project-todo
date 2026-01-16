@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.primary};
     background-color: ${({ theme }) => theme.colors.background};
     display: flex;
-    justify-content: center;
+    justify-items: center;
 
     background-image: url("/icons&images/snake.svg");
     background-repeat: no-repeat;
