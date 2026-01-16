@@ -4,6 +4,11 @@ import { SubmittedList } from "./components/submitted-todos/SubmittedList"
 import { EmptyStateCard } from "./components/empty-state/EmptyStateCard"
 import { useToDoStore } from "./store/ToDoStore"
 
+const StyledMainWrapper = styled.div`
+  overflow-x: hidden;
+  min-height: 100dvh;
+  position: relative;
+`
 
 const StyledHeading = styled.h1`
   text-align: center;
@@ -19,7 +24,7 @@ const StyledCardContainer = styled.div`
 export const App = () => {
   const todos = useToDoStore(state => state.todos)
   return (
-    <>
+    <StyledMainWrapper>
       <StyledHeading>To-do app</StyledHeading>
       <SubmitBar />
       <StyledCardContainer>
@@ -29,6 +34,6 @@ export const App = () => {
           <SubmittedList />
         )}
       </StyledCardContainer>
-    </>
+    </StyledMainWrapper>
   )
 }

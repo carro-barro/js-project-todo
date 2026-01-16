@@ -2,9 +2,12 @@ import styled from "styled-components"
 import { ToDoCheckbox } from "./ToDoCheckbox"
 import { useToDoStore } from "../../store/ToDoStore"
 import moment from "moment"
+import { ConfettiAnimation } from "./ConfettiAnimation"
 
 
 const StyledCard = styled.div`
+  position: relative;
+  overflow: visible;
   font-size: ${({ theme }) => theme.fontSizes.md};
   background-color: ${({ $isCompleted, theme }) => ($isCompleted ? "#adadad" : theme.colors.secondary)};
   border: 2px ${({ theme }) => theme.colors.primary} solid;
@@ -65,12 +68,33 @@ const StyledButton = styled.button`
 `
 
 export const SubmittedCard = ({ todo }) => {
-  const { removeTodo, toggleTodo } = useToDoStore()
+  const { removeTodo, toggleTodo, lastCompletedId, resetConfetti } = useToDoStore()
 
   const formattedDate = moment(todo.createdAt).fromNow()
 
+  const isWinner = lastCompletedId === todo.id
+
+  const handelComplete = () => {
+    setTimeout(() => {
+      resetConfetti
+    }, 0)
+  }
+
   return (
     <StyledCard $isCompleted={todo.completed}>
+      {isWinner && (
+        <div style={{
+          position: 'absolute',
+          inset: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 10,
+          pointerEvents: 'none'
+        }}>
+          <ConfettiAnimation onComplete={handelComplete} />
+        </div>
+      )}
       <StyledContentContainer>
         <StyledContainer>
           <ToDoCheckbox checked={todo.completed} onChange={() => toggleTodo(todo.id)} />

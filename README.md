@@ -1,9 +1,9 @@
 # Todo
 
-Netlify: 
+Netlify: carolinas-todo-app.netlify.app
 
 info:
-This app is a to-do app that is made with react and styled-components ...
+This app is a to-do app that is made with react, styled components and zustand. This is a school assignment and you can see the requirments down below.
 
 Requirments:
 - You should use Zustand for global state management. No prop-drilling.
