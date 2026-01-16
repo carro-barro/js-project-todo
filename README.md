@@ -36,4 +36,4 @@ when you have completed all tasks you should get a "good job, you are done" kidn
 
 stretch goals:
 add a timestamp to each card using moment.js (like in happy thoghts project)
-do a filter to filter on completed and uncompleted tasks
+implement local storage
