@@ -4,7 +4,9 @@ import { ThemeProvider } from 'styled-components'
 import { Theme } from './Theme.jsx'
 import { GlobalStyle } from './GlobalStyle.jsx'
 
+
 import { App } from './App.jsx'
+import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ThemeProvider theme={Theme}>
