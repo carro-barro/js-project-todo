@@ -5,7 +5,7 @@ import styled from "styled-components"
 const StyledCounterContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-self: center;
+  margin: 0 auto;
   width: 80%;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {

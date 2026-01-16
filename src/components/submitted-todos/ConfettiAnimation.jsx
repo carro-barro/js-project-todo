@@ -1,5 +1,5 @@
 import Lottie from "lottie-react"
-import confetti from "../../assets/Confetti Day.json"
+import confetti from "../../assets/ConfettiDay.json"
 
 export const ConfettiAnimation = ({ onComplete }) => {
   return (
