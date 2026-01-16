@@ -5,7 +5,6 @@ export const Theme = {
     secondary: '#ffecd1',    // Light Apricot (Card backgrounds)
     background: '#ffefe7', // Soft Peach (Body background)
     text: '#001524',         // Dark Navy (Main text)
-    success: '#4caf50',      // Green (Checked state)
     white: '#ffffff',
     transparent: 'transparent',
   },

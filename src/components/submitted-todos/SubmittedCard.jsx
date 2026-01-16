@@ -7,6 +7,7 @@ const StyledCard = styled.div`
   font-size: ${({ theme }) => theme.fontSizes.md};
   background: ${({ theme }) => theme.colors.secondary};
   border: 2px ${({ theme }) => theme.colors.primary} solid;
+  box-shadow: ${({ theme }) => theme.shadows.card};
 
   display: flex;
   flex-direction: row;

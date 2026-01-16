@@ -8,6 +8,7 @@ const StyledCard = styled.div`
   margin-top: 30px;
   text-align: center;
   border-radius: 6px;
+  box-shadow: ${({ theme }) => theme.shadows.card};
 
    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 60%;
